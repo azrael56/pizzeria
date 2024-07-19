@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<h2>Contacto</h2>
+
+<p><strong>Información del Dueño:</strong></p>
+<p>Conoce a <strong>Giovanni Rossi</strong>, el corazón y alma de <strong>Pizza Bella</strong>. Giovanni, un apasionado chef italiano con más de 30 años de experiencia en la elaboración de pizzas, fundó nuestra pizzería con el objetivo de llevar el auténtico sabor de Italia a nuestra comunidad. Su dedicación a la excelencia y su amor por la cocina se reflejan en cada pizza que preparamos.</p>
+<p>Giovanni no solo supervisa las operaciones diarias de la pizzería, sino que también está involucrado en la selección de ingredientes y en el desarrollo de nuevas recetas. Su visión es ofrecer una experiencia gastronómica que combine tradición y creatividad, siempre con un toque personal que hace que cada visita a <strong>Pizza Bella</strong> sea especial.</p>
+
+<p><strong>Ubicaciones y Horarios:</strong></p>
+<p>Actualmente, <strong>Pizza Bella</strong> se enorgullece de ofrecer sus deliciosas pizzas en las siguientes ubicaciones:</p>
+<ul>
+    <li><strong>Sucursal Centro:</strong> Calle del Gourmet, 123, Ciudad Central<br>
+        Horario: Lunes a Domingo, 11:00 AM - 11:00 PM
+    </li>
+    <li><strong>Sucursal Norte:</strong> Avenida Italia, 456, Barrio Norte<br>
+        Horario: Lunes a Domingo, 12:00 PM - 10:00 PM
+    </li>
+    <li><strong>Sucursal Sur:</strong> Plaza Mayor, 789, Zona Sur<br>
+        Horario: Lunes a Domingo, 11:00 AM - 10:00 PM
+    </li>
+</ul>
+
+<p><strong>¿Quieres hacer un pedido o reservar una mesa?</strong></p>
+<p>Estamos aquí para ayudarte. Puedes ponerte en contacto con nosotros de las siguientes maneras:</p>
+<ul>
+    <li><strong>Teléfono:</strong> +123 456 7890</li>
+    <li><strong>Email:</strong> contacto@pizzabella.com</li>
+    <li><strong>Redes Sociales:</strong>
+        <ul>
+            <li><a href="https://www.facebook.com/pizzabella" target="_blank">Facebook</a></li>
+            <li><a href="https://www.instagram.com/pizzabella" target="_blank">Instagram</a></li>
+            <li><a href="https://twitter.com/pizzabella" target="_blank">Twitter</a></li>
+        </ul>
+    </li>
+</ul>
+
+<p><strong>Formulario de Contacto:</strong></p>
+<p>Si prefieres, puedes completar el siguiente formulario y nos pondremos en contacto contigo lo antes posible:</p>
+
+<form action="{% url 'contact' %}" method="post">
+    {% csrf_token %}
+    <label for="name">Nombre:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+    <label for="message">Mensaje:</label><br>
+    <textarea id="message" name="message" rows="4" required></textarea><br><br>
+    <input type="submit" value="Enviar">
+</form>
+
+{% endblock %}

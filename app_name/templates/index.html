@@ -1,0 +1,28 @@
+<!-- index.html o el archivo de plantilla correspondiente -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h2>Bienvenido a Pizza Bella</h2>
+<p>Disfruta de nuestras deliciosas pizzas, preparadas con los ingredientes más frescos y de alta calidad. Nuestro compromiso es ofrecerte una experiencia gastronómica única.</p>
+
+<div class="pizza-list">
+    <div class="pizza-item">
+        <img src="{% static 'images/pizza1.jpg' %}" alt="Pizza Margarita" class="pizza-img">
+        <h5>Pizza Margarita</h5>
+        <p>Tomate, mozzarella y albahaca fresca. La Pizza Margarita es un clásico que combina la simplicidad con la perfección, ofreciendo un sabor auténtico y delicioso en cada bocado.</p>
+    </div>
+    <div class="pizza-item">
+        <img src="{% static 'images/pizza2.jpg' %}" alt="Pizza Pepperoni" class="pizza-img">
+        <h5>Pizza Pepperoni</h5>
+        <p>Deliciosa pizza con pepperoni y queso. La Pizza Pepperoni es ideal para los amantes de sabores intensos, con su mezcla irresistible de pepperoni picante y queso derretido.</p>
+    </div>
+    <div class="pizza-item">
+        <img src="{% static 'images/pizza3.jpg' %}" alt="Pizza Cuatro Quesos" class="pizza-img">
+        <h5>Pizza Cuatro Quesos</h5>
+        <p>Una combinación irresistible de cuatro tipos de queso. La Pizza Cuatro Quesos ofrece una experiencia cremosa y sabrosa, perfecta para aquellos que buscan una pizza con un sabor rico y decadente.</p>
+    </div>
+</div>
+
+<p class="message">¡Te esperamos con ansias para que nos visites y disfrutes de nuestras pizzas únicas y deliciosas!</p>
+{% endblock %}
